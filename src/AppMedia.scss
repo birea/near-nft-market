@@ -1,0 +1,188 @@
+
+$gray: #232323;
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    
+}
+@media (min-width: 992px) {
+    nav, nav header {
+        width: 55vw;
+        &.active {
+            transform: translateX(45vw)
+        }
+    }
+    header {
+        height: 96px;
+        > div {
+            height: 32px;
+        }
+        > div:nth-of-type(1) {
+            width: 220px;
+        }
+    }
+    section {
+        margin-top: 96px;
+        &:not(.items) {
+            margin-left:auto;
+            margin-right:auto;
+       }
+    }
+    section.credits {
+        max-width: 50vw;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    section.token {
+        padding: 64px;
+        align-items: flex-start;
+        .media, .content {
+            flex: 0.5;
+            margin-top: 0;
+            margin-bottom: 64px;
+        }
+        .content {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+        .heading {
+            text-align: left;
+        }
+    }
+    section.items {
+        margin-top: 128px;
+        > main {
+            grid-template-columns: 25% 25% 25% 25%;
+            > .item > .flame {
+                bottom: calc(8px - 0.35vw);
+                left: 8px;
+                width: 16px;
+                > img {
+                    width: 16px;
+                }
+            }
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        > .bg {
+            opacity: 0.2;
+        }
+    }
+    section.edition {
+        > div {
+            top: 64px;
+            padding: 0 25vw;
+            overflow: hidden;
+            > div {
+                max-height: 70vh;
+                overflow: scroll;
+                overflow-x: hidden;
+                > div {
+                    background: #232323;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        header {
+            padding: black;
+            padding: 32px calc(25vw + 32px);
+        }
+    }
+    section.modal {
+        .content {
+            left: 25vw;
+            width: 50vw;
+        }
+    }
+    section.page {
+        left: 25vw;
+        width: 50vw;
+    }
+
+    section.bids {
+        width: 75vw;
+        > main {
+            > .bid {
+                margin: 32px;
+                padding: 32px;
+                background: $gray;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                > div {
+                    margin: 0 16px;
+                    &.button {
+                        flex: 0 0 200px;
+                    }
+                    &.left {
+                        text-align: left;
+                        flex: 1;
+                        > p:first-of-type {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                > img {
+                    width: 25vw;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin: 16px 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 64px);
+        .built-on {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            * {
+                margin: auto 8px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+   section {
+       &:not(.items) {
+            max-width: 1400px;
+       }
+   }
+   section.credits {
+        max-width: 33.33vw;
+   }
+   section.edition {
+        > div {
+            margin-top: 64px;
+            padding: 0 33.33vw;
+        }
+        header {
+            padding: 32px calc(33.33vw + 32px);
+        }
+    }
+    section.modal {
+        .content {
+            left: 33.33vw;
+            width: 33.33vw;
+        }
+    }
+    section.page {
+        left: 33.33vw;
+        width: 33.33vw;
+    }
+}
+@media (min-width: 1600px) {
+    section.bids {
+        width: 50vw;
+    }
+    section.items > main {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+}
